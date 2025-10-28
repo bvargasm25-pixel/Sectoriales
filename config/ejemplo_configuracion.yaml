@@ -1,0 +1,15 @@
+# Ejemplo de archivo de configuración para el procesador sectorial de bancos.
+column_aliases:
+  bank: [Banco, Entidad, Institución]
+  metric: [Cuenta, Concepto, Rubro]
+  period: [Fecha, Periodo, Periodo_Contable]
+  value: [Importe, Valor, Monto]
+  currency: [Moneda, Divisa]
+  units: [Unidades, Unidad]
+required_columns: [bank, metric, period, value]
+parse_dates: [period]
+numeric_columns: [value]
+dropna_subset: [metric, value]
+additional_metadata:
+  sector: Bancos
+column_order: [bank, metric, period, value, currency, units, sector, source_file, sheet_name]
